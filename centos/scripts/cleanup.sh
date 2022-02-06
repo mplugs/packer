@@ -1,6 +1,7 @@
 #remove network mac and interface information
 sed -i '/HWADDR/d' /etc/sysconfig/network-scripts/ifcfg-eth0
 sed -i "/^UUID/d" /etc/sysconfig/network-scripts/ifcfg-eth0
+echo "DEVICE=eth0" >> /etc/sysconfig/network-scripts/ifcfg-eth0
 
 #disable selinux
 rm /etc/sysconfig/selinux
